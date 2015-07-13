@@ -1,0 +1,31 @@
+{
+    "server": {
+        "host": "localhost",
+        "port": 80,
+        "schema": "http",
+        "url": "http://domain.tld"
+    },
+
+    "session": {
+        "secret": "joke",
+        "key": "pass",
+        "cookie": {
+            "path": "/",
+            "httpOnly": true,
+            "maxAge": null
+        },
+        "saveUninitialized":false,
+        "resave":true
+    },
+
+    "auth": {
+        "fb": {
+            "app_id": 857000827726197,
+            "secret": "4f7c79467c4a16c5ddd0a4b594d0a646"
+        },
+        "vk": {
+            "app_id": 4483165,
+            "secret": "8oetkehqAHHMDx21sE3i"
+        }
+    }
+}
