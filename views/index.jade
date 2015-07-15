@@ -11,14 +11,13 @@ block login
 	div
 		div
 			h1 Вход в игру:
-			form(method='POST', role='form', action='/auth')
-				label(for='exampleInputText1') Login
-				input(type='text', placeholder='Введите логин', name='login')
+				label Login
+				input#inputLogin(type='text' placeholder='Введите логин' name='login')
 				br
-				label(for='exampleInputPassword2') Password
-				input(type='password', placeholder='Пароль', name='pass')
+				label Password
+				input#inputPassword(type='password' placeholder='Пароль' name='pass')
 				br
 				button(type='submit') Вход
-				a(href='../work/reg.php', role='botton') Регистрация
+				a(href='/reg' role='botton') Регистрация
 
 				
