@@ -1,17 +1,13 @@
 extends layout
 
-block test
-h1.ogon.crasota#joke(href="asdf" type="adf" asdf="2354") Ligmar - best game in the WORLD!!!!
-h3 #{login}
-
 block content	
 	div
 		h1 Вход в игру:
 		label Login
-		input(type='text' placeholder='Введите логин' name='login')
+		input#enter_login(type='text' placeholder='Введите логин')
 		br
 		label Password
-		input(type='password' placeholder='Пароль' name='pass')
+		input#enter_password(type='password' placeholder='Пароль')
 		br
 		button(id="but_log" type='submit') Вход
 		a(href='/reg' role='botton') Регистрация
