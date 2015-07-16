@@ -4,6 +4,7 @@ var express = require('express');
 var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+// var favicon = require('express-favicon');
 
 var logger = require('morgan');
 var bodyParser = require('body-parser');
@@ -12,6 +13,8 @@ module.exports = function (app) {
     app.set('port', config.get("server:port"));
     app.set('views', path.join(__dirname + "/..", 'views'));
     app.set('view engine', 'jade');
+
+    // app.use(favicon(__dirname + '/../public/favicon.ico'));
  
     var sessionOptions = config.get("session");
     if ('production' == app.get('env')) {
@@ -26,5 +29,4 @@ module.exports = function (app) {
     app.use(cookieParser());
     app.use(session(sessionOptions));
 
-    app.use(express.static(path.join(__dirname, 'public')));
  };
