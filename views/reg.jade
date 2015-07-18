@@ -2,25 +2,48 @@ doctype html
 head
 	title ligmar
 	link(rel='stylesheet' href='css/main.css')
-
+	script(type='text/javascript' src='js/jquery-2.1.4.js')
+	script(type='text/javascript' src='js/reg.js')
+	
 body
 	div
-		h1 Регистрация:
+			h1 Регистрация:
 			label Login
-			input(type='text' placeholder='Введите логин' name='login' required='')
+			input#reg_log(type='text' placeholder='Введите логин')
+			br
 			label Password
-			input(type='password' placeholder='Пароль' name='pass' required='')
-			span Пароль должен содержать не менее 6 символов
+			input#reg_pas(type='password' placeholder='Пароль')
+			br
 			label Password
-			input(type='password' placeholder='Повторите пароль' required='')
-			span Используйте надежный пароль
+			input(type='password' placeholder='Повторите пароль')
+			br
 			label Email
-			input(type='email' placeholder='Email' name='email' required='')
-			span Введите email для востановления пароля
-			select(name='class' required='')
-			span Выберите класс персонажа
-			select(name='gender' required='')
-				option(value='Мужской') Мужской
-				option(value='Женский') Женский
-			span Выберите пол персонажа
-			button(type='submit') Регистрация
+			input#reg_email(type='email' placeholder='Email')
+			br
+			button(id='but_reg' type='submit') Регистрация
+
+			//- form#testForm(data-abide='', novalidate='novalidate')
+	//- 	fieldset
+	//- 		legend Fieldset
+	//- 		.row
+	//- 			.large-12.columns
+	//- 			label(for='password') | Password 
+	//- 				small required
+	//- 				input#password(type='password', placeholder='LittleW0men.', name='password', required='')
+	//- 			small.error | Passwords must be at least 8 characters with 1 capital letter, 1 number, and one special character.
+	//- 			.large-12.columns
+	//- 			label(for='confirmPassword') | Confirm Password 
+	//- 				small required
+	//- 				input#confirmPassword(type='password', placeholder='LittleW0men.', name='confirmPassword', required='', data-equalto='password')
+	//- 			small.error Passwords must match.
+	//- 		.row
+	//- 			.large-4.columns
+	//- 			label(for='email') | Email 
+	//- 				input#email(type='email', placeholder='foundation@zurb.com')
+	//- 			small.error Valid email required.
+	//- 		.row
+	//- 			.large-12.columns
+	//- 				button.medium.button.green(type='submit') Submit
+	//- 		.row
+	//- 			.large-12.columns
+	//- 				button.medium.button.green(type='reset') Reset

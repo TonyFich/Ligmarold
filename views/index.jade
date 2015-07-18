@@ -1,13 +1,32 @@
 extends layout
 
 block content	
-	div
-		h1 Вход в игру:
-		label Login
-		input#enter_login(type='text' placeholder='Введите логин')
-		br
-		label Password
-		input#enter_password(type='password' placeholder='Пароль')
-		br
-		button(id="but_log" type='submit') Вход
-		a(href='/reg' role='botton') Регистрация
+
+	.container
+		.row
+			.large-12.columns
+				form#myForm(novalidate='novalidate' data-abide='ajax')
+					fieldset
+						legend#test Вход в игру
+						.row
+							.large-centered.columns
+								.row.collapse.prefix-radius
+									.small-9.small-push-3.columns
+										input#enter_login(placeholder='Введите логин' name='login'  pattern='strlen' required='' type='text')
+										small.error Неверный формат(4-8 символов)
+									.small-3.small-pull-9.columns
+										span.prefix Логин	
+								.row.collapse.prefix-radius
+									.small-9.small-push-3.columns
+										input#enter_password(placeholder='Введите пароль' name='pswd' required='' type='password')
+									.small-3.small-pull-9.columns
+										span.prefix Пароль		
+						.row
+							.large-12.columns
+								button#but_log(type='submit') Вход 
+								br
+								a(href='/reg' role='botton') Регистрация
+								br
+								a(href='#' role='botton') Забыли пароль					
+	script.
+		$(document).foundation();
