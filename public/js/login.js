@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#myForm')
+	$('#form_log')
 	//вывод, где ошибка валидации
 	// .on('invalid.fndtn.abide', function () {
 	//     var invalid_fields = $(this).find('[data-invalid]');
@@ -12,18 +12,24 @@ $(document).ready(function(){
 		    data: {login:$("#enter_login").val(),password:$("#enter_password").val()},
 		});
 		request.done(function(){
-			document.location.href ='/game/index';
+			// document.location.href ='/game/index';
 		});
 		request.fail(function(){
-			document.location.href ='/';
+			alert("Неверный логин или пароль");
 		});   
 	});
+
+	$('#but_reg').click(function(){
+		//Реакция нажания кнопки
+	  document.location.href ='/reg';
+ 	}); 
+
 });
 
 $(document).foundation({
 	abide: {
 		patterns: {
-			strlen: /[a-zA-Z]+(.){4,}$/
+			strlen: /[a-zA-Z]+(.){4,8}$/
 		}
 	}
 })

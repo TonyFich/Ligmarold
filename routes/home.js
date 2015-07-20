@@ -10,7 +10,7 @@ module.exports = function (app) {
     //для проверки
     app.get('/game/index', function (req, res) {
         res.render('game/index');
-
+    });
     app.post('/auth', function (req, res) {
     	if (!req.body) return res.sendStatus(400);
     	

@@ -1,32 +1,57 @@
 extends layout
 
 block content	
-
 	.container
+			.row.center.main
+				//p ЛОГОТИП LIGMAR
+				img(src="/img/login_test.jpg")
+				br 
+				br
+				button#but_reg(class="button large" type='submit') Регистрация
+			.row.center.main
+				.mini-line
+				.small-10.small-centered.columns.center
+					form#form_log(novalidate='novalidate' data-abide='ajax')
+						h2.login Вход в игру
+						.row.collapse.prefix-radius
+								.small-9.small-push-3.columns
+									input#enter_login(placeholder='Введите логин' pattern='strlen' required='' type='text')
+									small.error Неверный формат (4-8 символов)
+								.small-3.small-pull-9.columns
+									span.prefix Логин	
+						.row.collapse.prefix-radius
+								.small-9.small-push-3.columns
+									input#enter_password(placeholder='Введите пароль' required='' type='password')
+								.small-3.small-pull-9.columns
+									span.prefix Пароль	
+						.large-centered.columns.center
+							br
+							button(class="button large" type='submit') Вход 
+							br
+							a.login(href='#' role='botton') Забыли пароль?
+			script.
+				$(document).foundation();
+			.row.main
+				.smal-10.small-centered.columns.mini-line
+					.block_zero.center
+							img(src='/img/2hit.png', alt=' ')
+							span.bold  Об игре 
+							img(src='/img/vxod.png', alt=' ')
+					ul
+						| Вот уже несколько лет минуло с тех пор, как Великий Катаклизм постиг королевства Лигмара.
+						| Человеческая цивилизация пала от плодов собственной спеси и алчности.
+						| Эксперименты магов привели к невиданным по своим масштабам природным катастрофам и высвободили неизвестный доселе вид энергии, которая своим воздействием извратила суть всего, что не погибло от буйства стихий, а кое-что и воскресила…
+						| Вам не довелось присоединиться к организованным потокам беженцев и вы были брошены погибать в выжженных пустошах постапокалиптического мира, в одиночку противостоя природе и монстрам заполонившим старый мир. 
+						| Когда начало казаться, что вы вот-вот сойдете с ума от одиночества и безысходности, вам повезло встретиться с небольшой группой таких же несчастных, как и вы.Они-то и поведали вам о Зионе - огромном городе под горой и последнем оплоте людей.
+						| Вместе с ними вы двинулись в путь, надеясь обрести спасение.
+
+block footer
+		br
 		.row
-			.large-12.columns
-				form#myForm(novalidate='novalidate' data-abide='ajax')
-					fieldset
-						legend#test Вход в игру
-						.row
-							.large-centered.columns
-								.row.collapse.prefix-radius
-									.small-9.small-push-3.columns
-										input#enter_login(placeholder='Введите логин' name='login'  pattern='strlen' required='' type='text')
-										small.error Неверный формат(4-8 символов)
-									.small-3.small-pull-9.columns
-										span.prefix Логин	
-								.row.collapse.prefix-radius
-									.small-9.small-push-3.columns
-										input#enter_password(placeholder='Введите пароль' name='pswd' required='' type='password')
-									.small-3.small-pull-9.columns
-										span.prefix Пароль		
-						.row
-							.large-12.columns
-								button#but_log(type='submit') Вход 
-								br
-								a(href='/reg' role='botton') Регистрация
-								br
-								a(href='#' role='botton') Забыли пароль					
-	script.
-		$(document).foundation();
+			.small-10.small-centered.columns.center
+				| Ligmar (c) 2015 
+				span Overmobile
+				| , 16+
+				br
+				a.login(href='#') Соглашение | 
+				a.login(href='#') Контакты
