@@ -1,70 +1,37 @@
-doctype html
-head
-	title ligmar
-	link(rel='stylesheet' href='css/main.css')
-	link(rel="icon" type="image/x-icon" href="favicon.ico")
-	link(href='css/normalize.css' rel='stylesheet' media='screen')
-	link(href='css/foundation.min.css' rel='stylesheet' media='screen')
-	link(rel='stylesheet' href='css/main.css')
-	script(src='js/vendor/jquery.js' type='text/javascript')
-	script(src='js/foundation/foundation.js' type='text/javascript')
-	script(src='js/foundation/foundation.abide.js' type='text/javascript')
-	script(src='js/reg.js' type='text/javascript')
-	
-body
-	//- div
-	//- 		h1 Регистрация:
-	//- 		label Login
-	//- 		input#reg_log(type='text' placeholder='Введите логин')
-	//- 		br
-	//- 		label Password
-	//- 		input#reg_pas(type='password' placeholder='Пароль')
-	//- 		br
-	//- 		label Password
-	//- 		input(type='password' placeholder='Повторите пароль')
-	//- 		br
-	//- 		label Email
-	//- 		input#reg_email(type='email' placeholder='Email')
-	//- 		br
-	//- 		button(id='but_reg' type='submit') Регистрация
-	.row.center.main
-		.small-10.small-centered.columns.center
-			form#form_reg(novalidate='novalidate' data-abide='ajax')
-				h2.login Регистрация
-				.row.collapse.prefix-radius
-						.small-9.small-push-3.columns
-							input#reg_log(placeholder='Введите логин' pattern='strlen' required type='text')
-							small.error Неверный формат (4-8 символов)
-						.small-3.small-pull-9.columns
-							span.prefix Логин	
-					.password-field.row.collapse.prefix-radius
-						.small-9.small-push-3.columns
-							input#reg_pas(placeholder='Введите пароль' type='password' required pattern='[a-zA-Z]+')
-						.small-3.small-pull-9.columns
-							span.prefix Пароль	
-					.password-confirmation-field.row.collapse.prefix-radius
-						.small-9.small-push-3.columns
-							input#current_password(placeholder='Повторите пароль' type="password" required pattern="[a-zA-Z]+" data-equalto="reg_pas")
-							small.error Пароли не совпадают
-						.small-3.small-pull-9.columns
-							span.prefix Повторите пароль	
-					.row.collapse.prefix-radius
-						.small-9.small-push-3.columns
-							input#reg_email(placeholder='Email' required type='email')
-						.small-3.small-pull-9.columns
-							span.prefix Email
-							small.error Неверный email					
-					.large-centered.columns.center
-						button(class="button large" type='submit') Зарегистрироваться
-		script.
-			$(document).foundation();
-	.footer
-		br
-		.row
-			.small-10.small-centered.columns.center
-				| Ligmar (c) 2015 
-				span Overmobile
-				| , 16+
-				br
-				a.login(href='#') Соглашение | 
-				a.login(href='#') Контакты 	
+extends layout
+
+block content
+	.row
+		.row.main.block_zero.center
+			p.center Эксперименты конклава магов Старого Света привели к масштабной катастрофе, запечатленной в истории как Великий Катаклизм. Под воздействием высвободившегося из под контроля исследователей неизведанного вида магической энергии, мир, каким мы его знали был уничтожен. Все что от него осталось - выжженные до тла, населенные мерзкими тварями пустоши…
+		.row.center.main
+			.mini-line
+				.alert.alert-danger.hide#error_alert(style='padding: 0px; font-weight: bold;')
+				h2(style='color:#C6C6C6') Регистрация
+				.row1
+					.col-sm-12.form-group
+						.input-group
+							.input-group-addon Логин
+							input.form-control#reg_log(placeholder='Введите логин' type='text' maxlength='16')
+							span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")
+						.alert.alert-danger.hide#error_login_alert(style='padding: 0px; margin: 0 auto; width: 90%') Неверный формат (4-16 символов)
+					.col-sm-12.form-group
+						.input-group
+							.input-group-addon Email 
+							input.form-control#reg_email(placeholder='example@mail.com' type='email')
+							span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")
+						.alert.alert-danger.hide#error_email_alert(style='padding: 0px; margin: 0 auto; width: 90%') Неверный формат Email			
+					.col-sm-12.form-group
+						.input-group
+							.input-group-addon Пароль 
+							input.form-control#reg_pas_1(placeholder='Введите пароль' type='password' maxlength='20')
+							span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")
+						.alert.alert-danger.hide#error_password_alert_1(style='padding: 0px; margin: 0 auto; width: 90%') Неверный формат (6-20 символов)
+					.col-sm-12.form-group
+						.input-group 
+							.input-group-addon Пароль
+							input.form-control#reg_pas_2(placeholder='Повторите пароль' type='password' maxlength='20')
+							span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")
+						.alert.alert-danger.hide#error_password_alert_2(style='padding: 0px; margin: 0 auto; width: 90%') Пароли не совпадают			
+				button#but_reg_end(class="btn btn-primary btn-lg" data-loading-text="Регистрация..." type="button") Регистрация
+			br
