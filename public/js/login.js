@@ -24,10 +24,6 @@ $(document).ready(function(){
         }
     });
 
-	//Реакция нажания кнопки перехода на страницу регистрации
-	$('#but_reg_begin').click(function(){
-		document.location.href ='/reg';
-	});
 });
 
 var capchaResponse = undefined;
@@ -168,7 +164,7 @@ function registration()
 		$('#but_reg_end').button('loading')
 		$.ajax({
  			type: 'POST',
-			url: '/game',
+			url: '/reg',
    			data: {login:$("#reg_log").val(),password:$("#reg_pas_1").val(),email:$("#reg_email").val(), capcha:capchaResponse},
     		}).done(function(answer){
 			if(answer == 'ok') 
@@ -182,6 +178,10 @@ function registration()
 			{
 				$('#error_alert').html("Email уже используется").removeClass('hide');
 
+			}
+			else if(answer == 'capcha'){
+
+				$('#error_alert').html("Подтвердите, что вы не робот").removeClass('hide');
 			}
 		}).fail(function(){
 			$('#error_alert').html("Ошибка соединения").removeClass('hide');
