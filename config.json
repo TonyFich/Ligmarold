@@ -18,6 +18,8 @@
         "resave":false
     },
 
+    "recaptcha":"6LdSOgoTAAAAAOFHleBAtWsqo3oM8egmQ7la1TGy",
+
     "auth": {
         "fb": {
             "app_id": 857000827726197,

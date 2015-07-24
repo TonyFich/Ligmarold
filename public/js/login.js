@@ -26,14 +26,14 @@ $(document).ready(function(){
 
 });
 
-var capchaResponse = undefined;
+var captchaResponse = undefined;
 var captchaContainer = null;
 var loadCaptcha = function() {
   captchaContainer = grecaptcha.render('captcha_container', {
     'sitekey' : '6LdSOgoTAAAAAHl4OtPuZKu9MXzDVsHdAaTZBvSi',
     'theme': 'dark',
     'callback' : function(response) {
-    	capchaResponse = response;
+    	captchaResponse = response;
     }
   });
 }
@@ -159,13 +159,13 @@ function registration()
 
 	});
 
-	if(temp && capchaResponse != undefined)
+	if(temp && captchaResponse != undefined)
 	{
 		$('#but_reg_end').button('loading')
 		$.ajax({
  			type: 'POST',
 			url: '/reg',
-   			data: {login:$("#reg_log").val(),password:$("#reg_pas_1").val(),email:$("#reg_email").val(), capcha:capchaResponse},
+   			data: {login:$("#reg_log").val(),password:$("#reg_pas_1").val(),email:$("#reg_email").val(), captcha:captchaResponse},
     		}).done(function(answer){
 			if(answer == 'ok') 
 				document.location.href ='/game/characters';
@@ -179,7 +179,7 @@ function registration()
 				$('#error_alert').html("Email уже используется").removeClass('hide');
 
 			}
-			else if(answer == 'capcha'){
+			else if(answer == 'captcha'){
 
 				$('#error_alert').html("Подтвердите, что вы не робот").removeClass('hide');
 			}
