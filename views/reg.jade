@@ -8,7 +8,7 @@ block content
 			.mini-line
 				.alert.alert-danger.hide#error_alert(style='padding: 0px; font-weight: bold;')
 				h2(style='color:#C6C6C6') Регистрация
-				.row1
+				.row
 					.col-sm-12.form-group
 						.input-group
 							.input-group-addon Логин
@@ -32,6 +32,9 @@ block content
 							.input-group-addon Пароль
 							input.form-control#reg_pas_2(placeholder='Повторите пароль' type='password' maxlength='20')
 							span.glyphicon.glyphicon-remove.form-control-feedback(aria-hidden="true")
-						.alert.alert-danger.hide#error_password_alert_2(style='padding: 0px; margin: 0 auto; width: 90%') Пароли не совпадают			
+						.alert.alert-danger.hide#error_password_alert_2(style='padding: 0px; margin: 0 auto; width: 90%') Пароли не совпадают
+					.col-sm-12.form-group
+						div#captcha_container(style='margin: 0 auto; width: 304px;')
 				button#but_reg_end(class="btn btn-primary btn-lg" data-loading-text="Регистрация..." type="button") Регистрация
 			br
+

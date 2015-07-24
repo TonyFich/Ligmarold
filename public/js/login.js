@@ -26,12 +26,21 @@ $(document).ready(function(){
 
 	//Реакция нажания кнопки перехода на страницу регистрации
 	$('#but_reg_begin').click(function(){
-	document.location.href ='/reg';
+		document.location.href ='/reg';
 	});
-	
 });
 
-
+var capchaResponse = undefined;
+var captchaContainer = null;
+var loadCaptcha = function() {
+  captchaContainer = grecaptcha.render('captcha_container', {
+    'sitekey' : '6LdSOgoTAAAAAHl4OtPuZKu9MXzDVsHdAaTZBvSi',
+    'theme': 'dark',
+    'callback' : function(response) {
+    	capchaResponse = response;
+    }
+  });
+}
 
 //валидация логина
 function login()
@@ -154,13 +163,13 @@ function registration()
 
 	});
 
-	if(temp)
+	if(temp && capchaResponse != undefined)
 	{
 		$('#but_reg_end').button('loading')
 		$.ajax({
  			type: 'POST',
 			url: '/game',
-   			data: {login:$("#reg_log").val(),password:$("#reg_pas_1").val(),email:$("#reg_email").val()},
+   			data: {login:$("#reg_log").val(),password:$("#reg_pas_1").val(),email:$("#reg_email").val(), capcha:capchaResponse},
     		}).done(function(answer){
 			if(answer == 'ok') 
 				document.location.href ='/game/characters';
@@ -182,3 +191,4 @@ function registration()
 	}
 
 }
+
