@@ -15,7 +15,7 @@
             "maxAge": null
         },
         "saveUninitialized":false,
-        "resave":true
+        "resave":false
     },
 
     "auth": {
