@@ -1,0 +1,61 @@
+.placeimg{
+	padding:30px 100px;
+}
+.city{
+	margin: 0;
+	padding: 0;
+	margin-top:20px; 
+}
+.citybtn{
+	background: none;
+	border:1px solid #3590CA;
+}
+.citybtn:hover{
+	background: #3590CA;
+	color:white;
+	transition: all .3s linear;
+}
+.citybtn[disabled="disabled"]{
+	background: none;
+	border:1px solid #93BAC7;
+}
+.locationbtn{
+	background: none;
+	border:2px solid #BDCFD7;
+}
+
+.locationbtn:hover{
+	background: #BDCFD7;
+	color:black;
+	transition: all .3s linear;
+}
+.arenabtn{
+	background: none;
+	border:2px solid #9D53E7;
+}
+.arenabtn:hover{
+	background: #9D53E7;
+	color:white;
+	transition: all .3s linear;
+}
+
+.battle.col-md-6{
+	padding-bottom:20px;
+}
+h3{
+	background: #282F37;
+	color:#93BAC7;
+	font:bold 20px/20px Arial, sans-serif;
+	padding: 10px 10px;
+	
+}
+img{
+	border:1px solid white;
+}
+h2{
+	color:#00B6FF;
+	font:bold 30px/30px Arial, sans-serif;
+}
+.row.center.main{
+	background: #111214;
+}

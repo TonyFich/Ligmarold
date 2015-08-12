@@ -4,6 +4,6 @@ module.exports = function (app) {
     require('./game/index')(app);
 
     app.get('/test', function (req, res) {
-        res.render('index');
+        res.render('game/test/header');
     });
 };
