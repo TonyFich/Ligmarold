@@ -1,12 +1,12 @@
-var config = require("nconf");
-var cluster = require('cluster');
-var numCPUs = require('os').cpus().length;
+var config = require("nconf"),
+	cluster = require('cluster'),
+	numCPUs = require('os').cpus().length;
 var express = require('express');
 var app = express();
 
 config.argv()
-    .env()
-    .file({ file: 'config.json' });
+	.env()
+	.file({ file: 'config.json' });
 //boot
 var boot = require('./boot/index')(app)
 // routing
@@ -28,7 +28,7 @@ if (cluster.isMaster) {
 		var host = server.address().address
 		var port = server.address().port
 		if ('development' == app.get('env')) {
-		    console.log('Example app listening at http://%s:%s', host, port)
+			console.log('Example app listening at http://%s:%s', host, port)
 		}
 	})
 }
