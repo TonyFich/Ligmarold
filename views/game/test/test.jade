@@ -1,27 +1,25 @@
-
 .row
 	.row.center.main
-		h2 Зион
-		.row.placeimg
-			img(src="/img/city.png")
-		h3 Сражения
-		.row.battle
-			.col-md-6.col-xs-6
-				button(type="button").btn.btn-lg.btn-block.locationbtn Локации
-			.col-md-6.col-xs-6
-				button(type="button").btn.btn-lg.btn-block.arenabtn Арена
-		h3 Город
-		.row.city
-			.col-md-4.col-xs-4
-				button(type="button").btn.btn-lg.btn-block.citybtn Старейшина
-			.col-md-4.col-xs-4
-				button(type="button" disabled="disabled").btn.btn-lg.btn-block.citybtn Торговец
-			.col-md-4.col-xs-4
-				button(type="button").btn.btn-lg.btn-block.citybtn Искатель
-		.row.city
-			.col-md-4.col-xs-4
-				button(type="button" disabled="disabled").btn.btn-lg.btn-block.citybtn Кузнец
-			.col-md-4.col-xs-4
-				button(type="button").btn.btn-lg.btn-block.citybtn Портной
-			.col-md-4.col-xs-4
-				button(type="button").btn.btn-lg.btn-block.citybtn Ремесленник
+		.row
+			.col-md-2.col-xs-12.off-canvas
+				button(type="button").btn.btn-primary.btn-lg.btn-block
+					span.glyphicon.glyphicon-align-justify
+			.col-md-3.col-xs-8.hp_mp
+				.progress.hp
+					.progress-bar.progress-bar-danger(role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%") 40
+				.progress.mp
+					.progress-bar.progress-bar-info(role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 30%") 200
+			.col-md-3.col-xs-4
+				h3.text-center Mark(17)
+			.col-md-4.col-xs-12.baffs
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+				img(src="/img/city.png")
+		.row.exp
+			.progress
+				.progress-bar.progress-bar-warning(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;") 1776exp
