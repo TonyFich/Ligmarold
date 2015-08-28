@@ -1,0 +1,49 @@
+.placeimg img{
+	width:100%;
+	max-width: 350px;
+	margin:0 auto;
+}
+.city{
+	margin: 0;
+	padding: 0;
+	background-color: #282F37;
+	padding-bottom: 10px;
+}
+.mybtn{
+	background: #111214;
+	border:1px solid #3590CA;
+	padding: 10px 5px;
+	font:14px/14px verdana, tahoma, arial, sans-serif;
+}
+.btn_parent{
+	padding:5px 1px;
+	margin: 0;
+}
+.mybtn:hover{
+	background: #3590CA;
+	color:white;
+	transition: all .3s linear;
+}
+.mybtn[disabled="disabled"]{
+	background: none;
+	border:1px solid #93BAC7;
+}
+.battle.col-md-6{
+	padding-bottom:20px;
+}
+h3{
+	background: #282F37;
+	color:#93BAC7;
+	font:bold 23px/23px Arial, sans-serif;
+	padding: 20px 10px;
+	margin-bottom: 0;
+	font-family: 'Lora', serif;
+}
+h2{
+	color:#00B6FF;
+	font:bold 30px/30px Arial, sans-serif;
+	font-family: 'Lora', serif;
+}
+.row.center.main{
+	background: #111214;
+}
