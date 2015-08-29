@@ -35,7 +35,7 @@ module.exports = function (app) {
 					wallet: doc.wallet};
 				db.get(doc.characters, function (err, doc) {
 					user.characters = doc;
-					res.render('game/characters',{login:user.login});
+					res.render('game/enter/characters',{login:user.login});
 				});
 			});
 		}
@@ -45,7 +45,7 @@ module.exports = function (app) {
 
 	app.get('/game/new_character', function (req, res) {
 		if(req.session.id_login != undefined)
-			res.render('game/characters',{login:user.login});
+			res.render('game/enter/new_character',{login:user.login});
 		else
 			res.redirect('/');
 	});
