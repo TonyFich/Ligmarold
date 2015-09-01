@@ -1,0 +1,96 @@
+.top-block{
+	padding: 5px 0;
+}
+.top-block.col-xs-2{
+	padding-right: 0;
+}
+.allwrap{
+	border:1px solid white;
+}
+.topwrap{
+	border: 1px solid white;
+	border-bottom: none;
+}
+.characters h3{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+#off-canvas-btn{
+	float: right;
+	width: 30px;
+	height: 30px;
+	padding:0;
+	background-color: #305050;
+	border:none;
+}
+#off-canvas-btn span{
+	margin: 0;
+	font-size: 10px;
+	padding: 0;
+}
+.character{
+	padding: 5px 5px;
+	margin-bottom: 10px;
+}
+.character img{
+	width: 80px;
+	height: 80px;
+}
+.character button{
+	margin-top:20px;
+}
+.tags{
+	padding-top: 15px;
+	padding-left: 0;
+}
+.character span{
+	margin-right:2px;
+}
+.character_wrap{
+	border:1px solid white;
+	padding: 10px 5px;
+}
+.slide-hero .col-md-5{
+	padding: 20px 50px;
+}
+.form-control{
+
+}
+.choices{
+	padding-top: 30px;
+}
+
+.race .form-control,.gender .form-control,.name .form-control{
+	width: 100% !important;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.gender, .race, .name{
+	padding:0;
+}
+.choices .col-xs-8, .choices .col-md-8,.choices .col-lg-8{
+padding: 0;
+}
+.choices .col-md-8 input{
+	float: left;
+}
+.choices .col-xs-8 .form-control{
+-webkit-border-top-left-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-moz-border-radius-topleft: 0;
+-moz-border-radius-bottomleft: 0;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+.button_reg{
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+.choices .col-md-4, .choices .col-md-8{
+	margin-bottom: 10px;
+}

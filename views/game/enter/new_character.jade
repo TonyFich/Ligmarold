@@ -1,0 +1,47 @@
+extends layout
+
+block content
+	.row
+		.row.center.main
+			.allwrap
+				.row.slide-hero
+					.col-md-5
+						#carousel-example-generic.carousel.slide(date-ride="carousel")
+							.carousel-inner(role="listbox")
+								.item.active
+									img(src="img/rune.png")
+								.item
+									img(src="img/mage.png")
+								.item
+									img(src="img/nekr.png")
+							a.left.carousel-control(href="#carousel-example-generic" role="button" data-slide="prev")
+								span.glyphicon.glyphicon-chevron-left
+							a.right.carousel-control(href="#carousel-example-generic" role="button" data-slide="next")
+								span.glyphicon.glyphicon-chevron-right
+					.col-md-7.choices
+						form.form-inline
+							.form-group.col-xs-4.gender.col-md-4.col-lg-4
+								select.form-control
+									option Пол
+									option Муж
+									option Жен
+							.form-group.col-xs-8.col-md-8.col-lg-8
+								input(type="text" placeholder="Пол персонажа" disabled).form-control
+						form.form-inline
+							.form-group.col-xs-4.race.col-md-4
+								select.form-control
+									option Раса
+									option Эльф
+									option Орк
+							.form-group.col-xs-8.col-md-8
+								input(type="text" placeholder="Раса персонажа" disabled).form-control
+						form.form-inline
+							.form-group.col-xs-4.name.col-md-4
+								input(type="text" placeholder="Введите имя" disabled).form-control
+							.form-group.col-xs-8.col-md-8
+								input(type="text" placeholder="Имя персонажа").form-control
+				.row.button_reg
+					.col-md-5
+					.col-md-2
+						button(type="button").btn.btn-primary.btn-lg Создать и войти
+					.col-md-5
